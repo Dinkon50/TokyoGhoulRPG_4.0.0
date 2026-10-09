@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    " GC",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    },
+    "C": {
+      "item": "tokyoghoulrpg:rc_cell"
+    }
+  },
+  "result": {
+    "item": "tokyoghoulrpg:rc_injector",
+    "count": 1
+  }
+}

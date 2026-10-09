@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "G G",
+    "G G"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "item": "tokyoghoulrpg:ghoul_pants"
+  }
+}

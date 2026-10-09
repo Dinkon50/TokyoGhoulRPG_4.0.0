@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "tokyoghoulrpg:fonts/NotoSans-Regular.ttf",
+      "shift": [0, 0],
+      "size": 15,
+      "oversample": 2.0
+    }
+  ]
+}

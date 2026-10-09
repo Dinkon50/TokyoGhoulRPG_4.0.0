@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="tokyoghoulrpg"
+version="4.0.0"
+displayName="Tokyo Ghoul RPG: Пробуждение RC"
+authors="OpenAI"
+description="Tokyo Ghoul RPG для Forge 1.20.1: пути гуля, полугулю, человека и CCG, прокачка, кагуне, квинке, NPC, способности и боевой дух."
+[[dependencies.tokyoghoulrpg]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.tokyoghoulrpg]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

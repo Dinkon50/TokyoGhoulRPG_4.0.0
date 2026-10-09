@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " QC",
+    " SI",
+    "IS "
+  ],
+  "key": {
+    "Q": {
+      "item": "tokyoghoulrpg:rc_cell"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "tokyoghoulrpg:quinque_scorpion",
+    "count": 1
+  }
+}

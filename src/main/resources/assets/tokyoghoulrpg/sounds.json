@@ -1,0 +1,101 @@
+{
+  "skill_tree_tension": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:skill_tree_tension",
+        "stream": true
+      }
+    ]
+  },
+  "jaw_snap": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:jaw_snap",
+        "stream": false
+      }
+    ]
+  },
+  "finger_crack": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:finger_crack",
+        "stream": false
+      }
+    ]
+  },
+  "kagune_appear": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:kagune_appear",
+        "stream": false
+      }
+    ]
+  },
+  "kagune_retract": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:kagune_retract",
+        "stream": false
+      }
+    ]
+  },
+  "kagune_swish": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:kagune_swish",
+        "stream": false
+      }
+    ]
+  },
+  "kagune_hit": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:kagune_hit",
+        "stream": false
+      }
+    ]
+  },
+  "grapple_whoosh": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:grapple_whoosh",
+        "stream": false
+      }
+    ]
+  },
+  "dash_whoosh": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:dash_whoosh",
+        "stream": false
+      }
+    ]
+  },
+  "rage_activate": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:rage_activate",
+        "stream": false
+      }
+    ]
+  },
+  "quinque_swing": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "tokyoghoulrpg:quinque_swing",
+        "stream": false
+      }
+    ]
+  }
+}

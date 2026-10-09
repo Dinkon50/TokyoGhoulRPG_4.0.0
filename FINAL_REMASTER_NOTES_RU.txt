@@ -1,0 +1,29 @@
+TokyoGhoulRPG — Final Remaster Source Package
+
+Основа: TokyoGhoulRPG_FINAL_REMASTER_SOURCE
+Minecraft: 1.20.1 / Forge 47.2.0 / Java 17
+
+В этом пакете дополнительно сделано:
+- NPC-гулей подключена та же KaguneModel, что используется у игрока, вместо отдельного упрощённого NPC-кагуне.
+- NPC-кагуне рендерится из нижней части спины и использует те же текстуры/процедурную анимацию кагуне.
+- GhoulNPC, GhoulBoss и специальные ghoul_* NPC получают этот общий рендер.
+- Обычные NPC-текстуры подняты до 256x256; ghoul/ccg elite и boss — до 512x512.
+- Элементы одежды/масок в textures/item переведены на 400x400.
+- Armor UV-текстуры переведены на 512x256 с сохранением стандартной схемы Minecraft; Kaneki layer 1/2 переработаны с более детализированными пиксельными участками.
+- Kaneki и ghoul mask item textures переработаны в более сдержанном аниме-вдохновлённом стиле.
+- Система HumanizingInjectionItem не изменена этим этапом.
+
+Важно:
+Это ИСХОДНЫЙ ZIP, а не уже собранный JAR. В исходнике отсутствует gradlew/wrapper, поэтому финальный компиляционный результат должен быть подтверждён GitHub Actions. Статически проверены JSON-ресурсы и базовый баланс скобок изменённых Java-файлов.
+
+Аниме-референсы использовались как визуальная основа; официальные изображения не копировались в качестве игровых ассетов.
+
+3.6.1: техника 2 теперь имеет отдельное серверное поведение; вкладки дерева больше не срабатывают каждый кадр; семь сохранённых визуальных вариантов кагуне используют собственные модельные профили.
+
+[3.8.4 VISUAL ANIME PASS]
+- Added eight separate 1024x1024 authored kagune materials, one for each playable character profile.
+- These are actual detailed textures (organic marbling, fibers, grooves, highlights and grain), not blank/upscaled filler.
+- PlayerKaguneRenderer now selects the profile-specific texture instead of collapsing every profile into four generic RC textures.
+- KaguneModel received a character-specific animation finishing layer: Kaneki/Rize rinkaku, Takizawa/Touka/Ayato ukaku, Tsukiyama koukaku, Nishiki/Noro bikaku each get distinct timing/lag/recoil accents while retaining their canonical RC-type silhouette.
+- The visual direction is grounded in Tokyo Ghoul anime reference material and official anime/studio descriptions; gameplay effects remain game implementation and are not presented as anime canon.
+- Kagune remains a body-attached 3D organ/weapon rendered behind the torso; it is not an inventory item, armor slot or clothing.

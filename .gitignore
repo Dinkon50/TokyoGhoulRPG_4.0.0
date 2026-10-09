@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+.gradle-dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# Java
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / temporary files
+*.log
+*.tmp
+*.bak
