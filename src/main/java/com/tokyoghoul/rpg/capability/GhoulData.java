@@ -260,7 +260,7 @@ public class GhoulData {
             );
             NetworkHandler.CHANNEL.send(
                 net.minecraftforge.network.PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> sp),
-                new com.tokyoghoul.rpg.network.SyncEntityKagunePacket(sp.getUUID(), race.ordinal(), kaguneActive, kaguneType.ordinal(), rageActive)
+                new com.tokyoghoul.rpg.network.SyncEntityKagunePacket(sp.getUUID(), race.ordinal(), kaguneActive, kaguneType.ordinal(), isRageActive())
             );
         }
     }

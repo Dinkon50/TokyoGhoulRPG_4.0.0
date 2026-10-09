@@ -3,6 +3,7 @@ package com.tokyoghoul.rpg.screen;
 import com.tokyoghoul.rpg.TokyoGhoulRPG;
 import com.tokyoghoul.rpg.capability.GhoulData;
 import com.tokyoghoul.rpg.client.ClientGhoulData;
+import com.tokyoghoul.rpg.v2.KaguneType;
 import com.tokyoghoul.rpg.client.TokyoGuiStyle;
 import com.tokyoghoul.rpg.network.NetworkHandler;
 import com.tokyoghoul.rpg.network.UpgradePacket;
@@ -64,7 +65,7 @@ public class ProgressionScreen extends Screen {
 
     private String label(String id){return switch(id){case "kagune"->"КАГУНЕ";case "kagune_technique_1"->technique1Name();case "kagune_technique_2"->technique2Name();case "quinque_mastery"->"МАСТЕРСТВО КВИНКЕ";case "quinque_technique_1"->"ТЕХНИКА КВИНКЕ";case "quinque_technique_2"->"МАСТЕР-ТЕХНИКА";case "strength"->"СИЛА";case "speed"->"СКОРОСТЬ";case "regen"->"РЕГЕНЕРАЦИЯ";case "stealth"->"СКРЫТНОСТЬ";case "quinque_bleed"->"КРОВОТЕЧЕНИЕ";default->id.toUpperCase();};}
     private String description(String id){return switch(id){case "kagune_technique_1"->"Специальный приём выбранного кагуне";case "kagune_technique_2"->"Продвинутая форма контроля кагуне";case "quinque_technique_1"->"Заряженный удар квинке";case "quinque_technique_2"->"Продвинутая техника обращения с квинке";case "quinque_mastery"->"Повышает эффективность квинке CCG";default->"Пассивное усиление профиля";};}
-    private String technique1Name(){return switch(ClientGhoulData.kaguneType()){
+    private String technique1Name(){return switch(kaguneType()){
         case KANEKI_RINKAKU -> "РИНКАКУ: ПРОКОЛ ЩУПАЛЬЦАМИ";
         case TAKIZAWA_UKAKU -> "УКАКУ: ЗАЛП RC-ОСКОЛКАМИ";
         case RIZE_RINKAKU -> "РИНКАКУ: СЕРИЯ УДАРОВ";
@@ -74,7 +75,7 @@ public class ProgressionScreen extends Screen {
         case NISHIKI_BIKAKU -> "БИКАКУ: УДАР ХВОСТОМ";
         case NORO_BIKAKU -> "НЕУТОЧНЁННЫЙ ТИП: МАССИВНЫЙ УДАР";
         default -> "ТЕХНИКА КАГУНЕ";};}
-    private String technique2Name(){return switch(ClientGhoulData.kaguneType()){
+    private String technique2Name(){return switch(kaguneType()){
         case KANEKI_RINKAKU -> "РИНКАКУ: УДЛИНЁННЫЙ УДАР";
         case TAKIZAWA_UKAKU -> "УКАКУ: РАСШИРЕННЫЙ ЗАЛП";
         case RIZE_RINKAKU -> "РИНКАКУ: УСИЛЕННЫЙ ПРОКОЛ";
@@ -84,6 +85,13 @@ public class ProgressionScreen extends Screen {
         case NISHIKI_BIKAKU -> "БИКАКУ: КОНТРАТАКА ХВОСТОМ";
         case NORO_BIKAKU -> "НЕУТОЧНЁННЫЙ ТИП: ТЯЖЁЛЫЙ УДАР";
         default -> "ПРОДВИНУТАЯ ТЕХНИКА";};}
+
+
+    private KaguneType kaguneType(){
+        KaguneType[] values = KaguneType.values();
+        int index = ClientGhoulData.kaguneType();
+        return index >= 0 && index < values.length ? values[index] : KaguneType.NONE;
+    }
 
     private int value(String s){return switch(s){case "strength"->ClientGhoulData.strength();case "speed"->ClientGhoulData.speed();case "kagune"->ClientGhoulData.kagune();case "regen"->ClientGhoulData.regen();case "stealth"->ClientGhoulData.stealth();case "investigation"->ClientGhoulData.investigation();case "quinque"->ClientGhoulData.quinque();case "tactics"->ClientGhoulData.tactics();case "armor"->ClientGhoulData.armor();case "discipline"->ClientGhoulData.discipline();case "quinque_mastery"->ClientGhoulData.quinqueMastery();case "quinque_bleed"->ClientGhoulData.quinqueBleed()?1:0;default->0;};}
     private boolean active(Node n){return switch(n.id){case "rage"->ClientGhoulData.rageUnlocked();case "kagune_technique_1"->ClientGhoulData.kaguneTechnique1();case "kagune_technique_2"->ClientGhoulData.kaguneTechnique2();case "quinque_technique_1"->ClientGhoulData.quinqueTechnique1();case "quinque_technique_2"->ClientGhoulData.quinqueTechnique2();default->value(n.id)>=n.tier;};}
