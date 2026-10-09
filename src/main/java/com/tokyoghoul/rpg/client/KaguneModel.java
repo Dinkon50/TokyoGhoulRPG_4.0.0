@@ -655,7 +655,7 @@ public class KaguneModel extends EntityModel<Player> {
                 float cross = Mth.cos(delayed * 0.77f + s * 0.31f + phase) * (0.018f + 0.055f * t);
                 seg[r][s].xRot = row * (0.018f + 0.045f * t)
                         + wave * row - move * row * t * 0.055f
-                        - grappleReach * row * t * 0.52f;
+                        - grapple * row * t * 0.52f;
                 seg[r][s].yRot = side * (0.055f + 0.16f * t) + cross
                         + attack * side * t * 0.34f;
                 seg[r][s].zRot = side * wave * 0.45f;

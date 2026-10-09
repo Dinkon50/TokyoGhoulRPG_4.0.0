@@ -95,7 +95,7 @@ public class GrapplePacket {
         return net.minecraft.world.entity.projectile.ProjectileUtil.getEntityHitResult(
             player, from, to, search,
             e -> e != player && e.isAlive() && !e.isSpectator(),
-            max -> max
+            0.0F
         );
     }
 }

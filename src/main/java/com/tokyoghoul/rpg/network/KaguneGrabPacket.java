@@ -194,5 +194,5 @@ public class KaguneGrabPacket {
         }
     }
 
-    private KaguneGrabPacket() {}
+    public KaguneGrabPacket() {}
 }
